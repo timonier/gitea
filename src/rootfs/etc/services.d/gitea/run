@@ -1,0 +1,8 @@
+#!/bin/sh
+set -e -u
+
+export HOME="${GITEA_WORK_DIR}"
+export USER=git
+export USERNAME=git
+
+exec s6-setuidgid git gitea web >&2
