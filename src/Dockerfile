@@ -41,6 +41,6 @@ RUN set -ex \
     && apk del --no-progress BUILD_DEPS \
     && rm -f -r /tmp/*
 
-COPY ./rootfs /
+COPY rootfs/. /
 
 ENTRYPOINT [ "/init" ]
