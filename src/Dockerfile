@@ -14,7 +14,7 @@ RUN set -ex \
     # Install packages
 \
     && apk add --no-cache --no-progress --virtual BUILD_DEPS curl \
-    && apk add --no-cache --no-progress bash git openssh-client \
+    && apk add --no-cache --no-progress bash git openssh-client shadow \
 \
     # Create git user
 \

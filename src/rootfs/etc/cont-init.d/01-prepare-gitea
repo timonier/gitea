@@ -1,5 +1,13 @@
 #!/bin/sh
-set -e -u -x
+set -e
+
+if [ -n "${GITEA_GID}" ]; then
+    groupmod --gid "${GITEA_GID}" --non-unique git
+fi
+
+if [ -n "${GITEA_UID}" ]; then
+    usermod --non-unique --uid "${GITEA_UID}" git
+fi
 
 if [ ! -f "${GITEA_WORK_DIR}"/custom/conf/app.ini ]; then
     mkdir -p "${GITEA_WORK_DIR}/custom/conf"
