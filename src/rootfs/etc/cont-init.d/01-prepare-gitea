@@ -11,7 +11,7 @@ fi
 
 if [ ! -f "${GITEA_WORK_DIR}"/custom/conf/app.ini ]; then
     mkdir -p "${GITEA_WORK_DIR}/custom/conf"
-    dockerize -template /usr/local/share/gitea/conf/app.ini:"${GITEA_WORK_DIR}"/custom/conf/app.ini
+    dockerize -delims '⁅⁅:⁆⁆' -template /usr/local/share/gitea/conf/app.ini:"${GITEA_WORK_DIR}"/custom/conf/app.ini
 fi
 
 chown -R git:git "${GITEA_WORK_DIR}"
