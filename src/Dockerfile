@@ -9,7 +9,7 @@ ENV \
     S6_KEEP_ENV=1 \
     S6_READ_ONLY_ROOT=1
 
-RUN set -ex \
+RUN set -e -u -x \
 \
     # Install packages
 \
@@ -22,9 +22,7 @@ RUN set -ex \
 \
     # Install dockerize
 \
-    && export $(curl --location "https://github.com/timonier/version-lister/raw/generated/jwilder/dockerize/latest" | xargs) \
-    && curl --location "${DOCKERIZE_RELEASE}" | tar --directory /tmp --extract --gzip \
-    && mv /tmp/dockerize /usr/bin/dockerize \
+    && curl --location "https://github.com/timonier/dumb-entrypoint/raw/master/src/dockerize/installer" | bash -s -- install \
 \
     # Install gitea
 \
@@ -34,7 +32,7 @@ RUN set -ex \
 \
     # Install s6-overlay
 \
-    && curl --location "https://github.com/timonier/dumb-entrypoint/raw/master/src/s6-overlay/installer" | sh -s -- install \
+    && curl --location "https://github.com/timonier/dumb-entrypoint/raw/master/src/s6-overlay/installer" | bash -s -- install \
 \
     # Clean
 \
