@@ -38,11 +38,13 @@ docker run --env GITEA_GID=1005 --env GITEA_UID=1005 --interactive --publish 300
 2. Create your branch: `git checkout -b my-new-feature`.
 3. Commit your changes: `git commit -am 'Add some feature'`.
 4. Push to the branch: `git push origin my-new-feature`.
-5. Submit a pull request.
+5. Submit a [merge request](https://docs.gitlab.com/ee/user/project/merge_requests/).
 
-__Note__: Use the script `bin/build-image` to test your modifications locally.
+__Note 1__: [GitHub repository](https://github.com/timonier/gitea) is a mirror. [Merge request](https://docs.gitlab.com/ee/user/project/merge_requests/) has to be submitted to the [GitLab repository](https://gitlab.com/timonier/gitea).
 
-If you like / use this project, please let me known by adding a [★](https://help.github.com/articles/about-stars/) on the [GitHub repository](https://github.com/timonier/nginx).
+__Note 2__: Use the script `bin/build-image` to test your modifications locally.
+
+If you like / use this project, please let me known by adding a [★](https://help.github.com/articles/about-stars/) on the [GitHub repository](https://github.com/timonier/gitea) or on the [GitLab repository](https://gitlab.com/timonier/gitea).
 
 ## Links
 
@@ -50,4 +52,4 @@ If you like / use this project, please let me known by adding a [★](https://he
 * [image "timonier/gitea"](https://hub.docker.com/r/timonier/gitea/)
 * [just-containers/s6-overlay](https://github.com/just-containers/s6-overlay)
 * [jwilder/dockerize](https://github.com/jwilder/dockerize)
-* [timonier/dumb-entrypoint](https://github.com/timonier/dumb-entrypoint)
+* [timonier/dumb-entrypoint](https://gitlab.com/timonier/dumb-entrypoint)

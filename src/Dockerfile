@@ -22,17 +22,17 @@ RUN set -e -u -x \
 \
     # Install dockerize
 \
-    && curl --location "https://github.com/timonier/dumb-entrypoint/raw/master/src/dockerize/installer" | bash -s -- install \
+    && curl --location "https://gitlab.com/timonier/dumb-entrypoint/raw/master/src/dockerize/installer" | bash -s -- install \
 \
     # Install gitea
 \
-    && export $(curl --location "https://github.com/timonier/version-lister/raw/generated/go-gitea/gitea/latest" | xargs) \
+    && export $(curl --location "https://gitlab.com/timonier/version-lister/raw/generated/go-gitea/gitea/latest" | xargs) \
     && curl --location --output /usr/local/bin/gitea "${GITEA_RELEASE}" \
     && chmod +x /usr/local/bin/gitea \
 \
     # Install s6-overlay
 \
-    && curl --location "https://github.com/timonier/dumb-entrypoint/raw/master/src/s6-overlay/installer" | bash -s -- install \
+    && curl --location "https://gitlab.com/timonier/dumb-entrypoint/raw/master/src/s6-overlay/installer" | bash -s -- install \
 \
     # Clean
 \
