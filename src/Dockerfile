@@ -1,7 +1,7 @@
 FROM alpine:latest
 
 LABEL \
-    maintainer="Morgan Auchede <morgan.auchede@gmail.com>"
+    maintainer="Morgan AUCHEDE <morgan.auchede@gmail.com>"
 
 ENV \
     GITEA_WORK_DIR=/var/lib/gitea \
